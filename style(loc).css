@@ -1,0 +1,347 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;900&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    border: none;
+    outline: none;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    display: flex;
+}
+
+.sidebar {
+    position: sticky;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 100px;
+    height: 100vh;
+    padding: 0 1.7rem;
+    color: #fff;
+    overflow: hidden;
+    transition: width 0.5s linear;
+    background: rgb(226, 207, 212);
+    z-index: 10;
+}
+
+.sidebar:hover {
+    width: 250px;
+    transition: width 0.3s;
+}
+
+.logo {
+    height: 80px;
+    padding: 16px;
+}
+
+.menu {
+    height: 88%;
+    position: relative;
+    list-style: none;
+    padding: 0;
+}
+
+.menu li {
+    padding: 1rem;
+    margin: 8px 0;
+    border-radius: 8px;
+    transition: all 0.5s ease-in-out;
+}
+
+.menu li:hover, .active {
+    transition: 0.2s;
+    background: #ffffff58;
+}
+
+.menu a {
+    color: #070707;
+    font-size: 14px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.menu a span {
+    overflow: hidden;
+}
+
+.menu a i {
+    font-size: 2rem;
+}
+
+.help {
+    position: absolute;
+    bottom: 70px;
+    left: 0;
+    width: 100%;
+}
+
+.logout {
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    width: 100%;
+}
+
+.main--content {
+    position: relative;
+    background: #ebe9e9;
+    width: 100%;
+    padding: 1rem;
+}
+
+.header--wrapper img {
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+.header--wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    background: #fff;
+    border-radius: 10px;
+    padding: 10px 2rem;
+    margin-bottom: 1rem;
+}
+
+.header--title {
+    color: rgb(113, 99, 186);
+}
+
+.user--info {
+    display: flex;
+    align-items: center;
+    gap: 1;
+}
+
+.search--box {
+    background: rgb(237, 237, 237);
+    border-radius: 15px;
+    color: rgb(113, 99, 186);
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    padding: 1px 2px;
+    width: 1000px;
+    max-width: 100%;
+}
+
+.search--box input {
+    background: transparent;
+    padding: 10px;
+}
+
+.search--box i {
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: all 0.5s ease-out;
+}
+
+.search--box i:hover {
+    transform: scale(1.2);
+}
+
+/* card container */
+.card--container {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 10px;
+}
+
+.card--wrapper {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 1rem;
+}
+
+.card--header {
+    background: rgb(140, 189, 222);
+    border-radius: 10px;
+    padding: 1.2rem;
+    width: 270px;
+    height: 150px;
+    display: flex;
+    align-items: right;
+    flex-direction: column;
+    transition: all 0.5s ease-in-out;
+}
+
+.card--header:hover {
+    transform: translateY(-8px);
+}
+
+.amount {
+    display: flex;
+    flex-direction: column;
+}
+
+.title {
+    font-size: 15px;
+    font-weight: 200;
+}
+
+.bx-candles {
+    color: #a50808;
+    padding: 1rem;
+    height: 60px;
+    margin-left: auto;
+}
+
+.numbers {
+    font-size: 24px;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 600;
+}
+
+.figure {
+    font-size: 16px;
+    color: #3c3b3b;
+    letter-spacing: 2px;
+}
+
+.card-2 {
+    background: rgb(145, 177, 95);
+}
+
+.card-3 {
+    background: rgb(202, 144, 144);
+}
+
+.card-4 {
+    background: rgb(166, 119, 195);
+}
+
+.add-new-item {
+    position: absolute;
+    top: 400px; 
+    right: 20px; 
+    z-index: 20; 
+}
+
+.btn-primary {
+    background-color: #f10303f8;
+    border: none;
+    color: white;
+    padding: 15px 30px;
+    font-size: 19px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+}
+
+/* Table Styles */
+.items_table {
+    border-collapse: collapse;
+    margin: 25px 0; 
+    font-size: 0.9em; 
+    min-width: 400px;
+}
+
+.items_table th, .items_table td {
+    padding: 2px 6px; 
+}
+
+.items_table th {
+    background-color: #e99b7c; 
+    font-weight: bold;
+    font-size: 15px;
+}
+
+.items_table td {
+    text-align: left;
+}
+
+.items_table .aisle-header {
+    background-color: #f2f2f2;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.items_table .aisle-header:hover {
+    background-color: #d9d9d9;
+}
+
+.items_table .aisle-rows {
+    display: none;
+}
+
+.items_table .aisle-rows.show {
+    display: table-row-group;
+}
+
+.edit-icon {
+    color: #131414;
+    text-decoration: none;
+    font-size: 22px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20px; 
+    height: 100%; 
+}
+
+.edit-icon:hover {
+    color: #0056b3;
+}
+
+.filter-btn {
+    margin: 10px 0;
+    position: relative;
+    display: inline-block;
+}
+
+.filter-dropdown {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.filter-dropdown a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.filter-dropdown a:hover {
+    background-color: #f1f1f1;
+}
+
+.filter-btn:hover .filter-dropdown {
+    display: block;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    font-family: "Poppins", sans-serif;
+}
+
+table, th, td {
+    border: 1px solid black;
+}
+
+th, td {
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #f2f2f2;
+}
